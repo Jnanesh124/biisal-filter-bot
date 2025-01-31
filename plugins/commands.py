@@ -139,20 +139,7 @@ async def start(client:Client, message):
                 newPoint = await db.get_point(refUserId)
                 if AUTH_CHANNEL and await is_req_subscribed(client, message):
                         buttons = [[
-                            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-                            ],[
-                            InlineKeyboardButton('⚙ ꜰᴇᴀᴛᴜʀᴇs', callback_data='features'),
-                            InlineKeyboardButton('🎗️ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='premium'),
-                            ],
-                            [
-                            InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
-                            ],
-                            [
-                            InlineKeyboardButton('🎭 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
-                            InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🚩', callback_data='about')
-                            ],
-                            [
-                            InlineKeyboardButton('🤞🏻 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🤡', callback_data='earn')
+                            InlineKeyboardButton('🍿 UPDATE CHANNEL 🍿', url=f'https://t.me/ROCKERSBACKUP')
                             ]]
                         reply_markup = InlineKeyboardMarkup(buttons)
                         await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -169,23 +156,10 @@ async def start(client:Client, message):
             pass
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
-        ],[
-            InlineKeyboardButton('⚙ ꜰᴇᴀᴛᴜʀᴇs', callback_data='features'),
-            InlineKeyboardButton('🎗️ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='premium'),
-        ],
-        [
-            InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
-        ],
-        [
-            InlineKeyboardButton('🎭 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
-            InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🚩', callback_data='about')
-        ],
-        [
-            InlineKeyboardButton('🤞🏻 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🤡', callback_data='earn')
-        ]]
+                            InlineKeyboardButton('🍿 UPDATE CHANNEL 🍿', url=f'https://t.me/ROCKERSBACKUP')
+                            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
+        await message.reply(text=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -197,7 +171,14 @@ async def start(client:Client, message):
             logger.error("Make Sure Bot Is Admin In Forcesub Channel")
             return
         btn = [[
-            InlineKeyboardButton("🎗️ ᴊᴏɪɴ ɴᴏᴡ 🎗️", url=invite_link.invite_link)
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+V2pe-jcQJ5gxYjY1"),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+8fs4BVs1eo04MWE1"),
+        ],[
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+JHML3OZKJtYzM2I1"),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+hvHXgDbcQ70zMWZl"),
+        ],[
+            InlineKeyboardButton("ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+ejlq93G-0MFlN2E1"),
         ]]
 
         if message.command[1] != "subscribe":
@@ -216,7 +197,7 @@ async def start(client:Client, message):
                 )
         await client.send_message(
             chat_id=message.from_user.id,
-            text="<b>🙁 ғɪʀꜱᴛ ᴊᴏɪɴ ᴏᴜʀ ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ ᴛʜᴇɴ ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴍᴏᴠɪᴇ, ᴏᴛʜᴇʀᴡɪꜱᴇ ʏᴏᴜ ᴡɪʟʟ ɴᴏᴛ ɢᴇᴛ ɪᴛ.\n\nᴄʟɪᴄᴋ ᴊᴏɪɴ ɴᴏᴡ ʙᴜᴛᴛᴏɴ 👇</b>",
+            text="<b>👇 First Join below 6 channel and subscribe my youtube channel\nhttps://youtube.com/@jn2flix?si=44LH_BHzBREhQpfS\n\nthen U get direct📥 File no ❌ shortner</b>",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode=enums.ParseMode.HTML
         )
@@ -224,23 +205,17 @@ async def start(client:Client, message):
 
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+V2pe-jcQJ5gxYjY1"),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+8fs4BVs1eo04MWE1"),
         ],[
-            InlineKeyboardButton('⚙ ꜰᴇᴀᴛᴜʀᴇs', callback_data='features'),
-            InlineKeyboardButton('🎗️ ʙᴜʏ ᴘʀᴇᴍɪᴜᴍ', callback_data='premium'),
-        ],
-        [
-            InlineKeyboardButton('🎁 ɢᴇᴛ ᴘʀᴇᴍɪᴜᴍ ғʀᴇᴇ 🎁', callback_data=f'free_premium#{message.from_user.id}')
-        ],
-        [
-            InlineKeyboardButton('🎭 ʏᴏᴜʀ ᴘᴏɪɴᴛs ✨', callback_data=f'point#{message.from_user.id}'),
-            InlineKeyboardButton('🫠 ᴀʙᴏᴜᴛ 🚩', callback_data='about')
-        ],
-        [
-            InlineKeyboardButton('🤞🏻 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🤡', callback_data='earn')
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+JHML3OZKJtYzM2I1"),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+hvHXgDbcQ70zMWZl"),
+        ],[
+            InlineKeyboardButton("ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=invite_link.invite_link),
+            InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/+ejlq93G-0MFlN2E1"),
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        return await message.reply_photo(photo=START_IMG, caption=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
+        return await message.reply(text=script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
